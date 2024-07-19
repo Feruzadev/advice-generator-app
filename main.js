@@ -1,32 +1,33 @@
-const sectionTitleAdvice = document.querySelector('.section-title__advice')
-const sectionText = document.querySelector('.section-text')
-const herfIamge = document.querySelector('herf-iamge')
+const sectionTitleAdvice = document.querySelector('.section-title__advice');
+const sectionText = document.querySelector('.section-text');
+const newAdviceButton = document.querySelector('#new-advice-button');
 
-const url = "https://api.adviceslip.com/advice"
+const url = "https://api.adviceslip.com/advice";
 
 async function fetchAdviceData() {
     try {
-        const response = await fetch(url)
-        const data = await response.json()
-        // console.log(data)
-
-        AdviceData = data
-        renderAdvice(AdviceData)
-
+        const response = await fetch(url);
+        const data = await response.json();
+        renderAdvice(data);
     } catch (error) {
-        console.log("Xatolik", error)
+        console.error("Xatolik", error);
     }
-
 }
 
 function renderAdvice(data) {
-    console.log(data)
-
-  
-
+    if (data && data.slip) {
+        const advice = data.slip;
+        sectionTitleAdvice.textContent = `ADVICE #${advice.id}`;
+        sectionText.textContent = advice.advice;
+    } else {
+        console.error("Xatolik", data);
+    }
 }
 
-fetchAdviceData() 
+newAdviceButton.addEventListener('click', fetchAdviceData);
+
+
+fetchAdviceData();
 
 
 
