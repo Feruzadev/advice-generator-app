@@ -1,0 +1,98 @@
+@import url(./fonts.css);
+
+:root {
+    --dark-blue: #202733;
+    --Dark-Grayish-Blue: #313A48;
+    --Grayish-Blue: #4F5D74;
+    --Light-Cyan: #CEE3E9;
+    --Neon-Green: #53FFAA;
+    --manrope: "Manrope";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--dark-blue);
+    font-family:var(--manrope) ;
+}
+
+.section {
+    width: 540px;
+    height: 364px;
+    background: var(--dark-blue);
+    margin: auto;
+    margin-top: 223px;
+    margin-bottom: 223px;
+}
+.section-wrapper {
+    width: 540px;
+    height: 345px;
+    border-radius: 15px;
+    background: var(--Dark-Grayish-Blue);
+    box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.10);
+}
+.section-title__advice {
+    color:var(--Neon-Green);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4.086px;
+    padding-top: 48px;
+    margin-bottom: 24px;
+}
+.section-text {
+    max-width: 444px;
+    width: 100%;
+    margin: auto;
+    color: var(--Light-Cyan, #CEE3E9);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+}
+.inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 48px;
+    padding-bottom: 47px;
+}
+span {
+    width: 196px;
+    height: 1px;
+    background: var(--Grayish-Blue);
+}
+.section-link {
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: var(--Neon-Green);
+}
+.section-link:active {
+    background-color: #70e8aac7;
+}
+.herf-iamge {
+}
+.section-image {
+padding-top: 20px;
+padding-bottom: 16px;
+padding-left: 20px;
+padding-right: 16px;
+}
+
